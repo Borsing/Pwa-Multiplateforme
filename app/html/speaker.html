@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/app/js/speakers.js"> </script>
+    </head>
+    <body>
+        <div id="nav"> </div>
+        <script>
+            window.onload = function(){
+                console.log
+                $.get("/app/html/nav.html", function(data){
+                    $("#nav").html(data);
+                })
+            }
+        </script>
+        <script>LoadSpeaker();</script>
+        <script>FindSessionBySpeaker();</script>
+        <div id="speaker"> </div>
+        <div id="sessions"> </div>
+    </body>
+</html>

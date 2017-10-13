@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/app/js/note.js"> </script>
+    </head>
+    <body>
+        <div id="nav"> </div>
+        <script>
+            window.onload = function(){
+                console.log
+                $.get("/app/html/nav.html", function(data){
+                    $("#nav").html(data);
+                })
+            }
+        </script>
+        <h1> Mes notes </h1>
+        <div id="note"> 
+            <button type="submit" value="register" id="register" onclick="saveNote();" >Enregistrer</button>
+            <br/>
+            <textarea id="areanote"></textarea>
+        </div>
+        <script>loadNote();</script>
+    </body>
+</html>

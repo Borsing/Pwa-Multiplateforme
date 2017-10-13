@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/app/js/sessions.js"> </script>
+    </head>
+    
+    <body>
+        <div id="nav"> </div>
+        <script>
+            window.onload = function(){
+                console.log
+                $.get("/app/html/nav.html", function(data){
+                    $("#nav").html(data);
+                })
+            }
+        </script>
+        <script>LoadSession();</script>
+        <script>FindSpeakers();</script>
+        <div id="session"> </div>
+
+        <button type="submit" value="Notes" id="note" onclick="redirectNotes();">Mes Notes</button>
+    </body>
+</html>

@@ -118,7 +118,7 @@ function FindSpeakers(){
         for(var i = 0; i < containers.length ; i++){
             var id = containers.item(i).getAttribute("id");
             var speaker = speakers.find(s => s.id == id)
-            containers.item(i).innerHTML = '<a href=/app/speakers/speaker.html?id=' + speaker.id +'>'+ speaker.name + '</a>' ;
+            containers.item(i).innerHTML = '<a href=/app/html/speaker.html?id=' + speaker.id +'>'+ speaker.name + '</a>' ;
         }
     })
     .catch(function(error) {
@@ -129,5 +129,5 @@ function FindSpeakers(){
 function redirectNotes(){
     var searchParams = new URLSearchParams(window.location.search);
     var id = searchParams.get("id");
-    location.href = "/app/sessions/note.html?id=" + id ;
+    location.href = "/app/html/note.html?id=" + id ;
 }

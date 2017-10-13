@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="/app/js/speakers.js"> </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div id="nav"> </div>
+        <script>
+            window.onload = function(){
+                console.log
+                $.get("/app/html/nav.html", function(data){
+                    $("#nav").html(data);
+                })
+            }
+        </script>
+        <h1>Liste des présentateur</h1>
+        <script>LoadAllSpeakers();</script>
+        <div id="speakers"> </div>
+    </body>
+</html>

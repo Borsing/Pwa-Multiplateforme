@@ -116,7 +116,7 @@ function FindSessionBySpeaker(){
         sessions.forEach(session => {
             var containerSession = document.createElement("div");
             containerSession.setAttribute("id",session.id);
-            containerSession.innerHTML='<a href=/app/sessions/session.html?id='+session.id +'>'+session.title+'</a>';
+            containerSession.innerHTML='<a href=/app/html/session.html?id='+session.id +'>'+session.title+'</a>';
             container.appendChild(containerSession);
         })
 
