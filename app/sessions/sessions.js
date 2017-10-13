@@ -38,10 +38,8 @@ function LoadAllSessions(){
 }
 
 function LoadSession(){
-   // var id = URLSearchParams("id");
     var searchParams = new URLSearchParams(window.location.search);
     var id = searchParams.get("id");
-    console.log(id)
 
     fetch('https://raw.githubusercontent.com/DevInstitut/conference-data/master/sessions.json')
         .then(function(response) {
@@ -126,4 +124,10 @@ function FindSpeakers(){
     .catch(function(error) {
     console.log('Une erreur est survenue : ', error);
     });
+}
+
+function redirectNotes(){
+    var searchParams = new URLSearchParams(window.location.search);
+    var id = searchParams.get("id");
+    location.href = "/app/sessions/note.html?id=" + id ;
 }
